@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface GuideViewController : UIViewController<UIScrollViewDelegate>
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+//@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+{
+    UIScrollView *_scrollView;
+}
 
 
 @end

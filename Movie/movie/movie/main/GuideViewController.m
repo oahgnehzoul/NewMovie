@@ -25,8 +25,8 @@
 }
 
 - (void)_createSubView {
-//    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KHeight)];
-//    [self.view addSubview:_scrollView];
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KHeight)];
+    [self.view addSubview:_scrollView];
     for (int i=0; i<5; i++) {
         NSString *imageName = [NSString stringWithFormat:@"guide%d@2x.png",i+1];
         NSString *pageImageName = [NSString stringWithFormat:@"guideProgress%d.png",i+1];
