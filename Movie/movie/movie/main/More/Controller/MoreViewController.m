@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blackColor];
+//    self.view.backgroundColor = [UIColor blackColor];
     [self _createTableView];
     [self _loadData];
 }
@@ -60,10 +60,6 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     if (indexPath.row == 0) {
-    //    cacheLabel = [[UILabel alloc] initWithFrame:CGRectMake(KWidth-70, 15, 100, 30)];
-//            cache = [[SDImageCache sharedImageCache] init];
-//            CGFloat size = [cache getSize];
-//            cacheLabel.text = [NSString stringWithFormat:@"%.2fM",size/1024/1024];
         cache = [SDImageCache sharedImageCache];
         CGFloat size = [cache getSize];
         cacheLabel.text = [NSString stringWithFormat:@"%.2fM",size/1024/1024];
