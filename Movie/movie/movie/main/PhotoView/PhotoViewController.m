@@ -43,21 +43,17 @@
     _collectionView.pagingEnabled = YES;
     
     [self.view addSubview:_collectionView];
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.currentIndex inSection:0];
-//    NSLog(@"%@",indexPath);
-  //[_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+
 }
 - (void)setImageUrlArray:(NSArray *)imageUrlArray {
     _imageUrlArray = imageUrlArray;
     _collectionView.imageUrlArray = _imageUrlArray;
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.currentIndex inSection:0];
-   // NSLog(@"%@",indexPath);
     [_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
 
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

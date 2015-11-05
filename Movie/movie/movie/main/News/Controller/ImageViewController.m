@@ -67,7 +67,7 @@
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-   // NSLog(@"123");
+
     
     PhotoViewController *vc = [[PhotoViewController alloc] init];
     vc.view.backgroundColor = [UIColor redColor];
@@ -80,10 +80,8 @@
         NSString *str = modal.image;
         [imageUrlarray addObject:str];
     }
-  //  vc.view.backgroundColor = [UIColor redColor];
     vc.imageUrlArray = imageUrlarray;
-    //self.view.backgroundColor = [UIColor redColor];
-      [self presentViewController:nav animated:YES completion:nil];
+    [self presentViewController:nav animated:YES completion:nil];
    
 }
 - (void)didReceiveMemoryWarning {

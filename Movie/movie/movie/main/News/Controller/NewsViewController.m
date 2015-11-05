@@ -67,6 +67,7 @@
     [self.view addSubview:_newsTableView];
     UINib *nib = [UINib nibWithNibName:@"NewsTableViewCell" bundle:nil];
     [_newsTableView registerNib:nib forCellReuseIdentifier:@"cell"];
+//    [UIView animateWithDuration:<#(NSTimeInterval)#> delay:<#(NSTimeInterval)#> options:<#(UIViewAnimationOptions)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>]
 }
 #pragma mark - loadData
 - (void)_loadData {

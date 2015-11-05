@@ -34,6 +34,5 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     _scrollerView.imageUrlstr = _ImageUrlStr;
-   // _scrollerView.tag = 100;
 }
 @end

@@ -9,10 +9,12 @@
 #import "TopCollectionViewCell.h"
 #import "StarView.h"
 #import "UIImageView+WebCache.h"
+#import "common.h"
 @implementation TopCollectionViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+    self.frame = CGRectMake(0, 0, (KWidth-40)/3, 200);
 }
 - (void)setModal:(TopModal *)modal {
     _modal = modal;

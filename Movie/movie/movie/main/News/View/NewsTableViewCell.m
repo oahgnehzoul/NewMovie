@@ -8,10 +8,13 @@
 
 #import "NewsTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "common.h"
 @implementation NewsTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+    self.frame = CGRectMake(0, 0,KWidth, 90);
+//    NSLog(@"%f",self.frame.size.width);
 }
 
 - (void)setModal:(NewsModal *)modal {
@@ -19,6 +22,7 @@
     [self setNeedsLayout];
 }
 - (void)layoutSubviews {
+    [super layoutSubviews];
     NSString *imgStr = _modal.image;
     [_iconImage sd_setImageWithURL:[NSURL URLWithString:imgStr]];
     _title.text = _modal.title;
