@@ -19,31 +19,13 @@
 }
 
 + (void)requestUrl:(NSString *)url block:(BlockType)block {
-   /* static dispatch_once_t onceToken;
-    static id result;
-    dispatch_once(&onceToken, ^{
-        NSString *fullUrlStr = [NSString stringWithFormat:@"%@%@",BaseUrl,url];
-        NSURL *paraUrl = [NSURL URLWithString:fullUrlStr];
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:paraUrl];
-        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-        operation.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingMutableContainers];
-        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * operation, id responseObject) {
-            NSLog(@"下载完毕%@",responseObject);
-            result = responseObject;
-        } failure:^(AFHTTPRequestOperation * operation, NSError * error) {
-            
-        }];
-    });
-    return result;*/
-//    static id result;
+
     NSString *fullUrlStr = [NSString stringWithFormat:@"%@%@",BaseUrl,url];
     NSURL *paraUrl = [NSURL URLWithString:fullUrlStr];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:paraUrl];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingMutableContainers];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * operation, id responseObject) {
-//       NSLog(@"下载完毕%@",responseObject);
-//        result = responseObject;
         if (block) {
             block(responseObject);
         }
@@ -52,7 +34,6 @@
             }];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [queue addOperation:operation];
-//    return result;
 }
 
 @end

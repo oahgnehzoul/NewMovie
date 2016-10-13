@@ -12,6 +12,5 @@ typedef void(^BlockType) (id result);
 
 + (id)getJsonDataFromFile:(NSString *)fileName;
 
-//+ (id)getJSonData:(BlockType)block;
 + (void)requestUrl:(NSString *)url block:(BlockType)block;
 @end
